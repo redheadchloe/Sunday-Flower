@@ -1,0 +1,43 @@
+h2{
+    background: url(img/about_us01.svg) bottom;
+    background-size: cover;
+    height: 200px;
+    display: grid;
+    place-items: center;
+}
+.service-wrapper {
+    border-top: 1px solid var(--anchor-text);
+    border-bottom: 1px solid var(--anchor-text);
+}
+
+.service-item p{
+    line-height: 2;
+}
+
+
+.service-item img{
+    max-width:100%;
+    height: auto;
+}
+
+.img-01{border-radius: 250px 250px 0 0;}
+.img-02{border-radius: 150px 0 150px 0;}
+.img-03{border-radius: 0 150px 0 150px;}
+.img-04{border-radius: 0 0 250px 250px;}
+
+
+
+@media(max-width:650px) {
+    .service-item.grid{
+        grid-template-columns: 1fr;
+    }
+
+    .service-item img{
+        grid-row: 1;
+    }
+
+    .service-item a{
+        display: block;
+        text-align: center;
+    }
+}/*=============== max-width:650px ====================*/

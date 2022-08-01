@@ -1,0 +1,145 @@
+/* seasonal flowers */
+
+h2{
+    text-align: left;
+}
+
+.products{
+    /* background-image: url(img/homepage1.png);
+    background-size: cover; */
+    text-align: center;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+}
+
+
+button{
+    border: transparent;
+    background: transparent;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    display: inline;
+    cursor: pointer;
+    color: var(--anchor-text);
+}
+
+button::after{
+    content: '';
+    width: 0;
+    height: 1px;
+    display: block;
+    background: var(--anchor-text);
+}
+
+button.active::after{
+    width: 100%;
+    margin: auto;
+    transition: all 0.7s ease ;
+}
+
+
+
+.flower > img, .bouquet > img, .soup > img, .pre > img{
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* box-shadow: 20px 0px 0px var(--light-bg);
+    margin-right: 20px; */
+    /* box-shadow: var(--light-shadow);  */
+    margin-bottom: 1rem;
+}
+
+
+.desc{
+    display: block;
+    padding: 1rem;
+    border-top: 1px solid var(--anchor-text);
+    border-bottom: 1px solid var(--anchor-text);
+    margin-bottom: 4rem;
+}
+
+.desc span{
+    display: block;
+}
+
+.action{
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border: 1px solid var(--anchor-text);
+    display: inline-flex;
+}
+
+
+/* tab menu */
+.products .content{
+    height: 0;
+    overflow: hidden;
+}
+.products .content.active {
+    height: auto;
+    overflow: visible;
+    animation: fade 1s ease;
+} 
+
+@keyframes fade {
+    from{
+        opacity: 0.3;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.pagination a{
+    padding: 0.5rem 1rem;
+}
+
+.pagination a.active{
+    background-color: var(--light-gray);
+}
+
+.pagination a:hover:not(.active){
+    background-color: var(--light-gray);
+}
+
+@media(max-width:800px) {
+    .flower > img, .bouquet > img, .soup > img{
+        width: 200px;
+       height: 200px;
+   }
+
+}/*=============== max-width:800px ====================*/
+
+@media(max-width:650px) {
+    .flex{
+        flex-direction: column;
+    }
+
+    .btns{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content div{
+        margin-bottom: 1rem;
+    }
+
+    .desc{
+        width: fit-content;
+        margin: auto;
+      word-break: keep-all;
+    }
+
+    .action{
+        font-size: 1rem;
+        padding: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+}/*=============== max-width:650px ====================*/
