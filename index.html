@@ -251,44 +251,18 @@
         <div class="review-wrapper">
             <div class="img-wrapper">
                 <img class='pop' src="img/review01.jpeg" alt="">
-                <img src="img/review02.jpeg" alt="">
-                <img src="img/review03.jpeg" alt="">
-                <img src="img/review04.jpeg" alt="">
-                <img src="img/review05.jpeg" alt="">
-                <img src="img/review07.jpeg" alt="">
-                <img src="img/review08.jpeg" alt="">
-                <img src="img/review09.jpeg" alt="">
+                <img class='pop' src="img/review02.jpeg" alt="">
+                <img class='pop' src="img/review03.jpeg" alt="">
+                <img class='pop' src="img/review04.jpeg" alt="">
+                <img class='pop' src="img/review05.jpeg" alt="">
+                <img class='pop' src="img/review07.jpeg" alt="">
+                <img class='pop' src="img/review08.jpeg" alt="">
+                <img class='pop' src="img/review09.jpeg" alt="">
             </div>
 
         </div>
 
         <div class="modal">
-            <div class="review">
-                <img class="left" src="img/review01.jpeg" alt="">
-
-                <div class="text">
-                    <div class="title">
-                        <img src="img/instagram-icon.jpeg" class="insta" alt="">
-                        <h4>@user12345</h4>
-                        <a href="#123"><span class="material-symbols-outlined cross">
-                                close
-                            </span></a>
-                    </div>
-
-                    <!-- <div class="content"> -->
-                    <p>SUNDAY FLOWERで購入したお花！</p>
-
-                    <a href="#" class="hash">#お花#お花屋 <br>
-                        #SUNDAYFLOWER#サンデーフラワー</a>
-                    <div class="icon">
-                        <a href="#"><img src="img/instagram-like.svg" alt=""></a>
-                        <a href="#"><img src="img/instagram-send.png" alt=""></a>
-                        <a href="#"><img src="img/instagram-comment.png" alt=""></a>
-
-                    </div>
-                    <!-- </div> -->
-                </div>
-            </div>
         </div>
     </section>
 
@@ -397,7 +371,120 @@
     <a href="#123"><span class="to_top">
             TOP
         </span></a>
+    <script>
+        //news
 
+        let newsIndex = 1;
+        showNews(newsIndex);
+
+        function plusNews(n) {
+            showNews(newsIndex += n);
+        }
+
+        function currentNews(n) {
+            showNews(newsIndex = n);
+        }
+
+        function showNews(n) {
+            let i;
+            let news = document.querySelectorAll('.news');
+            let dots = document.querySelectorAll('.dot');
+            if (n > news.length) { newsIndex = 1; }
+            if (n < 1) { newsIndex = news.length; }
+            for (i = 0; i < news.length; i++) {
+                news[i].style.display = 'none';
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.add('fire');
+                dots[i].className = dots[i].className.replace('fire', '');
+            }
+            news[newsIndex - 1].style.display = 'grid';
+            dots[newsIndex - 1].className += ' fire';
+        }
+
+        // review
+
+        const reviewImgs = [
+            {
+                "review": "img/review01.jpeg"
+            },
+            {
+                "review": "img/review02.jpeg"
+            },
+            {
+                "review": "img/review03.jpeg"
+            },
+            {
+                "review": "img/review04.jpeg"
+            },
+            {
+                "review": "img/review05.jpeg"
+            },
+            {
+                "review": "img/review06.jpeg"
+            },
+            {
+                "review": "img/review07.jpeg"
+            },
+            {
+                "review": "img/review08.jpeg"
+            }
+        ]
+
+
+        const popUp = document.querySelector('.modal');
+        const pops = document.querySelectorAll('.pop');
+        pops.forEach(pop => {
+            for (let img of reviewImgs) {
+                console.log(img.review);
+                pop.addEventListener('click', () => {
+                    popUp.classList.add('on');
+                    let ugc = '';
+                    ugc = `<div class="review">
+                                        <img class="left" src="${img.review}" alt="">
+
+                                        <div class="text">
+
+                                            <div class="title">
+                                             <img src="img/instagram-icon.jpeg" alt="">
+                                             <span>@user12345</span>
+                                             <a href="#123"><span class="material-symbols-outlined cross">
+                                                     close
+                                                 </span></a>
+                                            </div>
+                                     
+                                            
+                                                <p>SUNDAY FLOWERで購入したお花！</p>
+                                                <a href="#" class="hash">#お花#お花屋 <br>
+                                                #SUNDAYFLOWER#サンデーフラワー</a>
+                                            
+                                                <div class="icon">
+                                                <a href="#"><img src="img/instagram-like.svg" alt=""></a>
+                                                <a href="#"><img src="img/instagram-send.png" alt=""></a>
+                                                <a href="#"><img src="img/instagram-comment.png" alt=""></a>
+                                                </div>
+                                            
+
+                                        </div>
+                            </div>`
+                    popUp.innerHTML = ugc;
+
+
+                    const crosses = document.querySelectorAll('.cross');
+                    crosses.forEach(cross => {
+
+                        cross.addEventListener('click', function () {
+                            popUp.classList.remove('on');
+                            popUp.innerHTML = '';
+                        });
+                    })
+                })
+            }
+        });
+
+
+
+    </script>
 </body>
 
 </html>
