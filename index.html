@@ -250,14 +250,14 @@
         </div>
         <div class="review-wrapper">
             <div class="img-wrapper">
-                <img class='pop' src="img/review01.jpeg" alt="">
-                <img class='pop' src="img/review02.jpeg" alt="">
-                <img class='pop' src="img/review03.jpeg" alt="">
-                <img class='pop' src="img/review04.jpeg" alt="">
-                <img class='pop' src="img/review05.jpeg" alt="">
-                <img class='pop' src="img/review07.jpeg" alt="">
-                <img class='pop' src="img/review08.jpeg" alt="">
-                <img class='pop' src="img/review09.jpeg" alt="">
+                <img class='pop' data-id="0" src="img/review01.jpeg" alt="">
+                <img class='pop' data-id="1" src="img/review02.jpeg" alt="">
+                <img class='pop' data-id="2" src="img/review03.jpeg" alt="">
+                <img class='pop' data-id="3" src="img/review04.jpeg" alt="">
+                <img class='pop' data-id="4" src="img/review05.jpeg" alt="">
+                <img class='pop' data-id="5" src="img/review06.jpeg" alt="">
+                <img class='pop' data-id="6" src="img/review07.jpeg" alt="">
+                <img class='pop' data-id="7" src="img/review08.jpeg" alt="">
             </div>
 
         </div>
@@ -435,13 +435,14 @@
         const popUp = document.querySelector('.modal');
         const pops = document.querySelectorAll('.pop');
         pops.forEach(pop => {
-            for (let img of reviewImgs) {
-                console.log(img.review);
-                pop.addEventListener('click', () => {
+            pop.addEventListener('click', (e) => {
+                for (let i = 0; i < reviewImgs.length; i++) {
+                    const current = e.target.dataset.id;
+                    console.log(reviewImgs[current]);
                     popUp.classList.add('on');
                     let ugc = '';
                     ugc = `<div class="review">
-                                        <img class="left" src="${img.review}" alt="">
+                                        <img class="left" src="${reviewImgs[current].review}" alt="">
 
                                         <div class="text">
 
@@ -478,8 +479,8 @@
                             popUp.innerHTML = '';
                         });
                     })
-                })
-            }
+                }
+            });
         });
 
 
