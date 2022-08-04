@@ -223,6 +223,7 @@ text-align: center;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .review-container .wavy span{
@@ -259,6 +260,7 @@ text-align: center;
     height: 200px;
     width: 200px;
     object-fit: cover;
+    overflow: hidden;
 }
 
 
@@ -268,23 +270,21 @@ text-align: center;
 }
 
 .img-wrapper>img:hover{
-    transform: scale(1.2);
+    opacity: .7;
     transition: 0.4s;
 }
 
-.modal h4, .modal p{
+.modal span, .modal p{
     color: #666;
 }
 
-.modal h4 {
-    display: inline-block;
-}
 .modal{
     width: 600px;
     height: 500px;
+
 }
 
-.modal .review{
+.review{
     padding: 1rem;
     border-radius: 10px;
     background: #fff;
@@ -294,20 +294,19 @@ text-align: center;
     grid-gap: 1rem;
 }
 
-.modal .review>*:first-child {
-    width: 100%;
+.review .left{
+    display: block;
+    max-width: 100%;
     object-fit: cover;
     height: auto;
-    height: 100%;
-}
+} 
 
-.modal img.insta{
+.review .title img{
     width: 2rem;
     margin-right: 1rem;
-
 }
 
-.modal .title{
+.review .title{
     display: flex;
     align-items: center;
     padding-bottom: 1rem;
@@ -316,7 +315,7 @@ text-align: center;
     position: relative;
 }
 
-.modal .cross{
+.review .cross{
     font-size: 2rem;
     display: block;
     cursor: pointer;
@@ -332,13 +331,12 @@ text-align: center;
 }
 
 
-.modal .text{
+.review .text{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
-.modal .text p, .modal .text a.hash{flex: 1;}
+.review .text p,.review .text a.hash {flex:1 ;}
 
 
 a.hash{
@@ -363,6 +361,8 @@ a.hash{
     color: #333;
 }
 
+
+/* popup */
 .review-container{
     position: relative;
 }
@@ -500,24 +500,19 @@ a.hash{
         display: block;
         margin-top: 1rem;
     }
-
-    .modal .review{
-        padding: 1rem;
-        border-radius: 10px;
-        background: #fff;
-        border: 1px solid #666;
-        display: grid;
-        grid-template-columns: 1fr;
-        width: max-content;
-        grid-gap: 2rem;
-    }
-    
-
     .img-wrapper{grid-template-columns: repeat(2, 1fr)}
 
-    .modal .content{height: fit-content;}
+    .review{
+        grid-template-columns: 1fr;
+        width: fit-content;
+        grid-gap: 2rem;
+        width: 50%;
+    }
+    .modal{
 
-    a.hash{margin: 1rem 0;}
+        transform: translate(-25%,-50%);
+    }
+  
 
     .access-wrapper{
         display: grid;
