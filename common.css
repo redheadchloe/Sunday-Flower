@@ -239,7 +239,7 @@ footer{
 
 
 .footer-logo {
-    height: 6rem;
+    height: 5rem;
     display: block;
 }
 
@@ -265,22 +265,34 @@ footer{
     color: var(--clr-white);
 }
 
+.links-wrapper *{
+    margin: 0.6rem 0;
+}
 
 .mail-container{
     width: fit-content;
+    height: auto;
     background: var(--clr-white);
     border-radius: var(--radius);
     box-shadow: var(--dk-shadow);
     justify-self: end;
 }
 
-.form-wrapper input{
-    width: 230px;
+.mail-container h3
+{
+    border-bottom: 1px solid var(--light-gray);
+
 }
 
-.mail-container *, .links-wrapper *{
-    margin: 0.6rem 0;
+.form-control{margin-bottom: 1rem;}
+
+.form-control input{
+    width: 70%;
 }
+.form-control.flex{
+    justify-content: flex-start;
+}
+
 
 .submit-btn, input{
     color: var(--anchor-text);
@@ -291,7 +303,10 @@ footer{
 
 .submit-btn{
     cursor: pointer;
+    display: block;
     box-shadow: var(--light-shadow);
+    margin: 2rem auto;
+    width: 35%;
 }
 
 
