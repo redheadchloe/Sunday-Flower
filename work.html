@@ -20,20 +20,16 @@
     </div>
     <!-- header -->
     <header class="p-2">
-        <nav>
+        <nav class="flex">
             <div class="mobile-nav">
                 <a href="index.html"><img src="logo.png" alt=""></a>
-                <div class="hamburger">
-                    <a href="#" class="open">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                </div>
             </div>
-            <div class="nav">
+            <div class="nav flex">
                 <ul class="left flex">
-                    <input type="text" name="search" placeholder="検索する" class="search">
+                    <li>
+                        <input type="text" name="search" class="search">
+                        <ul class="results"></ul>
+                    </li>
                     <li><a href="#1" class="drop-btn">About+</a>
                         <ul class="dropdown">
                             <li><a href="about.html">About Us</a></li>
@@ -55,88 +51,42 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="faq.html">Q&A</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href=""><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span></a></li>
-                    <li><a href=""><span class="material-symbols-outlined">
-                                account_circle
-                            </span></a></li>
                 </ul>
             </div>
+            <ul class="icons flex">
+                <li><a href=""><span class="material-symbols-outlined">
+                            shopping_cart
+                        </span></a></li>
+                <li><a href="#1" class="drop-btn"><span class="material-symbols-outlined">
+                            account_circle
+                        </span></a>
+                    <ul class="dropdown">
+                        <li><a href="#1">ログイン</a></li>
+                        <li><a href="#1">新規会員の登録</a></li>
+                    </ul>
+                </li>
+                <li class="hamburger">
+                    <a href="#123" class="open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+
         </nav>
+
     </header>
     <section class="work-container wrap">
         <div class="work-wrapper my-4">
             <div class="img-wrapper">
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img src="img/gallery01.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img src="img/gallery02.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img loading="lazy" src="img/gallery03.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img loading="lazy" src="img/gallery04.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img loading="lazy" src="img/gallery05.jpeg" alt="">
-                </div>
             </div>
             <div class="img-wrapper">
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img src="img/gallery06.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img src="img/gallery07.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img loading="lazy" src="img/gallery08.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img loading="lazy" src="img/gallery09.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img loading="lazy" src="img/gallery10.jpeg" alt="">
-                </div>
             </div>
             <div class="img-wrapper">
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img src="img/gallery11.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img src="img/gallery12.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img loading="lazy" src="img/gallery13.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img loading="lazy" src="img/gallery14.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img loading="lazy" src="img/gallery15.jpeg" alt="">
-                </div>
             </div>
             <div class="img-wrapper">
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img src="img/gallery16.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img src="img/gallery17.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img src="img/gallery18.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img src="img/gallery19.jpeg" alt="">
-                </div>
-                <div class="overlay-wrapper" data-hover="作品タイトル:&#010;作品内容: &#010;作品時間:&#010;">
-                    <img src="img/gallery20.jpeg" alt="">
-                </div>
             </div>
-
-
         </div>
     </section>
 
@@ -177,16 +127,16 @@
                 </div>
             </div>
 
-            <div class="mail-container p-2 text-ctr">
-                <h3>メルマガ登録</h3>
-                <p>Sunday Flowerやお花に関する情報をいち早くお伝えします！</p>
+            <div class="mail-container p-2">
+                <h3 class="text-ctr my-2">メルマガ登録</h3>
+                <p class="mb-2">Sunday Flowerやお花に関する情報をいち早くお伝えします！</p>
                 <div class="form-wrapper">
                     <form action="#">
-                        <div class="form-control">
+                        <div class="form-control flex">
                             <span>お名前：</span>
                             <input class="p-1" type="text" name="name" placeholder="お名前をご入力ください" required>
                         </div>
-                        <div class="form-controm">
+                        <div class="form-control flex">
                             <span>メール：</span>
                             <input class="p-1" type="email" name="email" placeholder="メールアドレスをご入力ください" required>
                         </div>
@@ -204,12 +154,55 @@
         </span></a>
 
     <script>
+        work1 = [
+            { 'img': 'img/gallery01.jpeg' },
+            { 'img': 'img/gallery02.jpeg' },
+            { 'img': 'img/gallery03.jpeg' },
+            { 'img': 'img/gallery04.jpeg' },]
+        work2 = [
+            { 'img': 'img/gallery05.jpeg' },
+            { 'img': 'img/gallery06.jpeg' },
+            { 'img': 'img/gallery07.jpeg' },
+            { 'img': 'img/gallery08.jpeg' },]
+        work3 = [
+            { 'img': 'img/gallery09.jpeg' },
+            { 'img': 'img/gallery10.jpeg' },
+            { 'img': 'img/gallery11.jpeg' },
+            { 'img': 'img/gallery12.jpeg' },
+        ]
+        work4 = [
+            { 'img': 'img/gallery13.jpeg' },
+            { 'img': 'img/gallery14.jpeg' },
+            { 'img': 'img/gallery15.jpeg' },
+            { 'img': 'img/gallery16.jpeg' },]
+        work5 = [
+            { 'img': 'img/gallery17.jpeg' },
+            { 'img': 'img/gallery18.jpeg' },
+            { 'img': 'img/gallery19.jpeg' },
+            { 'img': 'img/gallery20.jpeg' },
+        ]
+
+        works = [work1, work2, work3, work4, work5]
+
+        const imgWrapper = document.querySelectorAll('.img-wrapper');
+        for (let n = 0; n < works.length; n++) {
+            for (let i = 0; i < imgWrapper.length; i++) {
+                imgWrapper[i].innerHTML += `
+            <div class="overlay-wrapper" data-hover="タイトル:&#010;内容: &#010;時間:&#010;">
+            <img loading="lazy" src="${works[n][i].img}" alt="work img"></div>`;
+            }
+        }
+
+
+
+
+
         const imgs = document.querySelectorAll('.overlay-wrapper');
 
         let observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                entry.target.classList.toggle('slide-top', entry.isIntersecting)
-                // if (entry.isIntersecting) observer.unobserve(entry.target)
+                entry.target.classList.toggle('slide-top', entry.isIntersecting);
+                if (entry.isIntersecting) observer.unobserve(entry.target)
             })
         }, {
             threshold: .5,

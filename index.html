@@ -18,21 +18,17 @@
         <img src="pre-loader.gif" alt="">
     </div>
     <!-- header -->
-    <header class="p-1">
-        <nav>
+    <header class="p-2">
+        <nav class="flex">
             <div class="mobile-nav">
                 <a href="index.html"><img src="logo.png" alt=""></a>
-                <div class="hamburger">
-                    <a href="#123" class="open">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                </div>
             </div>
-            <div class="nav">
+            <div class="nav flex">
                 <ul class="left flex">
-                    <input type="text" name="search" placeholder="検索する" class="search">
+                    <li>
+                        <input type="text" name="search" class="search">
+                        <ul class="results"></ul>
+                    </li>
                     <li><a href="#1" class="drop-btn">About+</a>
                         <ul class="dropdown">
                             <li><a href="about.html">About Us</a></li>
@@ -54,15 +50,31 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="faq.html">Q&A</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href=""><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span></a></li>
-                    <li><a href=""><span class="material-symbols-outlined">
-                                account_circle
-                            </span></a></li>
                 </ul>
             </div>
+            <ul class="icons flex">
+                <li><a href=""><span class="material-symbols-outlined">
+                            shopping_cart
+                        </span></a></li>
+                <li><a href="#1" class="drop-btn"><span class="material-symbols-outlined">
+                            account_circle
+                        </span></a>
+                    <ul class="dropdown">
+                        <li><a href="#1">ログイン</a></li>
+                        <li><a href="#1">新規会員の登録</a></li>
+                    </ul>
+                </li>
+                <li class="hamburger">
+                    <a href="#123" class="open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+
         </nav>
+
     </header>
 
     <!-- hero section -->
@@ -70,36 +82,6 @@
         <div class="hero">
             <h1 class="hero-text">日曜とお花、<br>　日曜のお花。</h1>
             <div class="img-container">
-                <div class="slide">
-                    <img src="img/key1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="img/key2.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="img/key3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="img/key4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="img/key5.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="img/key1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="img/key2.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="img/key3.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="img/key4.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="img/key5.jpeg" alt="">
-                </div>
             </div>
         </div>
 
@@ -215,7 +197,7 @@
                         <h4><small>2022.05.05</small> <br> 「フローリスト」2022年6月号に掲載されました！</h4>
                         <p>2022年5月7日発売の「フローリスト」6月号で、SUNDAY FLOWER（サンデーフラワー）について紹介しております。 <br>
                             ぜひチェックしてみてください。</p>
-                        <a href="" class="action">Blog記事へ</a>
+                        <a href="blog.html" class="action">Blog記事へ</a>
                     </div>
                 </div>
             </div>
@@ -372,6 +354,30 @@
             TOP
         </span></a>
     <script>
+
+        // slide
+
+        const slides = [
+            { "slide": "img/key1.jpeg" },
+            { "slide": "img/key2.jpg" },
+            { "slide": "img/key3.jpeg" },
+            { "slide": "img/key4.jpeg" },
+            { "slide": "img/key5.jpeg" },
+            { "slide": "img/key1.jpeg" },
+            { "slide": "img/key2.jpg" },
+            { "slide": "img/key3.jpeg" },
+            { "slide": "img/key4.jpeg" },
+            { "slide": "img/key5.jpeg" },
+        ]
+
+        const slideContainer = document.querySelector('.img-container');
+
+        for (i = 0; i < slides.length; i++) {
+            slideContainer.innerHTML += `<div class="slide">
+                    <img src="${slides[i].slide}" alt="slide img">
+                </div>`}
+
+
         //news
 
         let newsIndex = 1;
@@ -438,11 +444,11 @@
             pop.addEventListener('click', (e) => {
                 for (let i = 0; i < reviewImgs.length; i++) {
                     const current = e.target.dataset.id;
-                    console.log(reviewImgs[current]);
+                    //console.log(reviewImgs[current]);
                     popUp.classList.add('on');
                     let ugc = '';
                     ugc = `<div class="review">
-                                        <img class="left" src="${reviewImgs[current].review}" alt="">
+                                        <img class="left" src="${reviewImgs[current].review}" alt="review img">
 
                                         <div class="text">
 

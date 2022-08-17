@@ -18,21 +18,17 @@
     <div class="preloader">
         <img src="pre-loader.gif" alt="">
     </div>
-    <header class="p-1">
-        <nav>
+    <header class="p-2">
+        <nav class="flex">
             <div class="mobile-nav">
                 <a href="index.html"><img src="logo.png" alt=""></a>
-                <div class="hamburger">
-                    <a href="#123" class="open">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                </div>
             </div>
-            <div class="nav">
+            <div class="nav flex">
                 <ul class="left flex">
-                    <input type="text" name="search" placeholder="検索する" class="search">
+                    <li>
+                        <input type="text" name="search" class="search">
+                        <ul class="results"></ul>
+                    </li>
                     <li><a href="#1" class="drop-btn">About+</a>
                         <ul class="dropdown">
                             <li><a href="about.html">About Us</a></li>
@@ -54,15 +50,31 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="faq.html">Q&A</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href=""><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span></a></li>
-                    <li><a href=""><span class="material-symbols-outlined">
-                                account_circle
-                            </span></a></li>
                 </ul>
             </div>
+            <ul class="icons flex">
+                <li><a href=""><span class="material-symbols-outlined">
+                            shopping_cart
+                        </span></a></li>
+                <li><a href="#1" class="drop-btn"><span class="material-symbols-outlined">
+                            account_circle
+                        </span></a>
+                    <ul class="dropdown">
+                        <li><a href="#1">ログイン</a></li>
+                        <li><a href="#1">新規会員の登録</a></li>
+                    </ul>
+                </li>
+                <li class="hamburger">
+                    <a href="#123" class="open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+
         </nav>
+
     </header>
 
     <section class="concept-center">
@@ -120,16 +132,16 @@
                 </div>
             </div>
 
-            <div class="mail-container p-2 text-ctr">
-                <h3>メルマガ登録</h3>
-                <p>Sunday Flowerやお花に関する情報をいち早くお伝えします！</p>
+            <div class="mail-container p-2">
+                <h3 class="text-ctr my-2">メルマガ登録</h3>
+                <p class="mb-2">Sunday Flowerやお花に関する情報をいち早くお伝えします！</p>
                 <div class="form-wrapper">
                     <form action="#">
-                        <div class="form-control">
+                        <div class="form-control flex">
                             <span>お名前：</span>
                             <input class="p-1" type="text" name="name" placeholder="お名前をご入力ください" required>
                         </div>
-                        <div class="form-controm">
+                        <div class="form-control flex">
                             <span>メール：</span>
                             <input class="p-1" type="email" name="email" placeholder="メールアドレスをご入力ください" required>
                         </div>

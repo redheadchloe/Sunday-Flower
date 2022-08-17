@@ -19,21 +19,17 @@
         <img src="pre-loader.gif" alt="">
     </div>
     <!-- header -->
-    <header class="p-2 mb-4">
-        <nav>
+    <header class="p-2">
+        <nav class="flex">
             <div class="mobile-nav">
                 <a href="index.html"><img src="logo.png" alt=""></a>
-                <div class="hamburger">
-                    <a href="#" class="open">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </a>
-                </div>
             </div>
-            <div class="nav">
+            <div class="nav flex">
                 <ul class="left flex">
-                    <input type="text" name="search" placeholder="検索する" class="search">
+                    <li>
+                        <input type="text" name="search" class="search">
+                        <ul class="results"></ul>
+                    </li>
                     <li><a href="#1" class="drop-btn">About+</a>
                         <ul class="dropdown">
                             <li><a href="about.html">About Us</a></li>
@@ -55,15 +51,31 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="faq.html">Q&A</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href=""><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span></a></li>
-                    <li><a href=""><span class="material-symbols-outlined">
-                                account_circle
-                            </span></a></li>
                 </ul>
             </div>
+            <ul class="icons flex">
+                <li><a href=""><span class="material-symbols-outlined">
+                            shopping_cart
+                        </span></a></li>
+                <li><a href="#1" class="drop-btn"><span class="material-symbols-outlined">
+                            account_circle
+                        </span></a>
+                    <ul class="dropdown">
+                        <li><a href="#1">ログイン</a></li>
+                        <li><a href="#1">新規会員の登録</a></li>
+                    </ul>
+                </li>
+                <li class="hamburger">
+                    <a href="#123" class="open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+
         </nav>
+
     </header>
 
 
@@ -73,211 +85,23 @@
         <h2>商品一覧　｜ Our Products</h2>
         <div class="products">
             <div class="btns text-ctr my-4">
-                <button class="btn" data-id="all">すべて</button>
                 <button class="btn" data-id="flowers">切花</button>
                 <button class="btn" data-id="bouquets">花束</button>
                 <button class="btn" data-id="soups">ソープフラワー</button>
                 <button class="btn" data-id="preserved">プリザーブドフラワー</button>
+                <button class="btn" data-id="all">すべて</button>
             </div>
-            <div class="flowers flex active content" id="flowers">
-                <div class="flower">
-                    <img src="img/15.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥200</span>
-                        <span>ポピー</span>
-                        <span>（1本から）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
+            <div class="product-wrapper">
+                <div class="flowers flex active content" id="flowers">
                 </div>
-                <div class="flower">
-                    <img src="img/06 lily.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥200</span>
-                        <span>オレンジ・リリー</span>
-                        <span>（1本から）</span>
 
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
+                <div class="bouquets text-ctr flex content" id="bouquets">
                 </div>
-                <div class="flower">
-                    <img src="img/01.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥200</span>
-                        <span>アイリス</span>
-                        <span>（3本から）</span>
 
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
+                <div class="soups text-ctr flex content" id="soups">
                 </div>
-                <div class="flower">
-                    <img src="img/07 peony.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥200</span>
-                        <span>ペオニー</span>
-                        <span>（1本から）</span>
 
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bouquets text-ctr flex content" id="bouquets">
-                <div class="bouquet">
-                    <img src="img/bk01.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥500</span>
-                        <span>バラの花束　S</span>
-                        <span>（カード付き）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
-                </div>
-                <div class="bouquet">
-                    <img src="img/bk02.jpg" alt="">
-                    <div class="desc">
-                        <span>¥600</span>
-                        <span>雛菊の花束　M</span>
-                        <span>（カード付き）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
-                </div>
-                <div class="bouquet">
-                    <img src="img/bk03.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥500</span>
-                        <span>「父の日」花束</span>
-                        <span>（カード付き）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
-                </div>
-                <div class="bouquet">
-                    <img src="img/bk04.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥700</span>
-                        <span>「夏の日」花束　L</span>
-                        <span>（カード付き）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
-                </div>
-            </div>
-            <div class="soups text-ctr flex content" id="soups">
-                <div class="soup">
-                    <img src="img/soup1.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥200</span>
-                        <span>バラソープ</span>
-                        <span>（1本から）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
-                </div>
-                <div class="soup">
-                    <img src="img/soup2.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥500</span>
-                        <span>ギフトセット</span>
-                        <span>（3本入り）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
-                </div>
-                <div class="soup">
-                    <img src="img/soup3.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥200</span>
-                        <span>ラベンダーソープ</span>
-                        <span>（1本から）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
-                </div>
-                <div class="soup">
-                    <img src="img/soup4.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥400</span>
-                        <span>シトラスソープ</span>
-                        <span>（2点セット）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
-                </div>
-            </div>
-            <div class="pres text-ctr flex content" id="preserved">
-                <div class="pre">
-                    <img src="img/pre01.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥600</span>
-                        <span>みどり</span>
-                        <span>（ケース付き）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
-                </div>
-                <div class="pre">
-                    <img src="img/pre02.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥500</span>
-                        <span>オレンジ</span>
-                        <span>（ケース付き）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
-                </div>
-                <div class="pre">
-                    <img src="img/pre03.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥500</span>
-                        <span>青</span>
-                        <span>（ケース付き）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
-                </div>
-                <div class="pre">
-                    <img src="img/pre04.jpeg" alt="">
-                    <div class="desc">
-                        <span>¥500</span>
-                        <span>ピンク</span>
-                        <span>（ケース付き）</span>
-
-                        <a href="" class="action"><span class="material-symbols-outlined">
-                                shopping_cart
-                            </span>　カートに入れる</a>
-                    </div>
+                <div class="pres text-ctr flex content" id="preserved">
                 </div>
             </div>
         </div>
@@ -330,16 +154,16 @@
                 </div>
             </div>
 
-            <div class="mail-container p-2 text-ctr">
-                <h3>メルマガ登録</h3>
-                <p>Sunday Flowerやお花に関する情報をいち早くお伝えします！</p>
+            <div class="mail-container p-2">
+                <h3 class="text-ctr my-2">メルマガ登録</h3>
+                <p class="mb-2">Sunday Flowerやお花に関する情報をいち早くお伝えします！</p>
                 <div class="form-wrapper">
                     <form action="#">
-                        <div class="form-control">
+                        <div class="form-control flex">
                             <span>お名前：</span>
                             <input class="p-1" type="text" name="name" placeholder="お名前をご入力ください" required>
                         </div>
-                        <div class="form-controm">
+                        <div class="form-control flex">
                             <span>メール：</span>
                             <input class="p-1" type="email" name="email" placeholder="メールアドレスをご入力ください" required>
                         </div>
@@ -374,7 +198,7 @@
                     else {
                         content.classList.remove('active');
                         const show = document.getElementById(target);
-                        console.log(show);
+                        // console.log(show);
                         show.classList.add('active');
                     }
                 });
@@ -387,6 +211,135 @@
 
         btns[0].click();
 
+
+
+        const cutFlr = [
+            {
+                'img': 'img/15.jpeg',
+                'price': '200',
+                'name': 'ポピー',
+                'note': '（1本から）'
+            },
+            {
+                'img': 'img/06.jpeg',
+                'price': '200',
+                'name': 'オレンジ・リリー',
+                'note': '（1本から）'
+            },
+            {
+                'img': 'img/01.jpeg',
+                'price': '200',
+                'name': 'アイリス',
+                'note': '（1本から）'
+            },
+            {
+                'img': 'img/07.jpeg',
+                'price': '200',
+                'name': 'ペオニー',
+                'note': '（1本から）'
+            }
+        ]
+
+        const bouquet = [
+            {
+                'img': 'img/bk01.jpeg',
+                'price': '500',
+                'name': 'バラの花束　S',
+                'note': '（カード付き）'
+            },
+            {
+                'img': 'img/bk02.jpg',
+                'price': '600',
+                'name': '雛菊の花束　M',
+                'note': '（カード付き）'
+            },
+            {
+                'img': 'img/bk03.jpeg',
+                'price': '500',
+                'name': '「父の日」花束',
+                'note': '（カード付き）'
+            },
+            {
+                'img': 'img/bk04.jpeg',
+                'price': '700',
+                'name': '「夏の日」花束　L',
+                'note': '（カード付き）'
+            },
+        ]
+
+        const soup = [
+            {
+                'img': 'img/soup1.jpeg',
+                'price': '200',
+                'name': 'バラソープ',
+                'note': '（1本から）'
+            },
+            {
+                'img': 'img/soup2.jpeg',
+                'price': '500',
+                'name': 'ギフトセット',
+                'note': '（3本入り）'
+            },
+            {
+                'img': 'img/soup3.jpeg',
+                'price': '200',
+                'name': 'ラベンダーソープ',
+                'note': '（1本から）'
+            },
+            {
+                'img': 'img/soup4.jpeg',
+                'price': '400',
+                'name': 'シトラスソープ',
+                'note': '（2点セット）'
+            },
+        ]
+
+        const preserved = [
+            {
+                'img': 'img/pre01.jpeg',
+                'price': '600',
+                'name': 'ミドリ',
+                'note': '（ケース付き）'
+            },
+            {
+                'img': 'img/pre02.jpeg',
+                'price': '500',
+                'name': 'オレンジ',
+                'note': '（ケース付き）'
+            },
+            {
+                'img': 'img/pre03.jpeg',
+                'price': '500',
+                'name': 'アオ',
+                'note': '（ケース付き）'
+            },
+            {
+                'img': 'img/pre04.jpeg',
+                'price': '500',
+                'name': 'ピンク',
+                'note': '（ケース付き）'
+            },
+        ]
+
+        const flowers = [cutFlr, bouquet, soup, preserved]
+
+        const flrContainers = document.querySelectorAll('.product-wrapper div');
+        for (let i = 0; i < flowers.length; i++) {
+            for (let n = 0; n < flrContainers.length; n++) {
+                flrContainers[i].innerHTML += `<div class="flower">
+                    <img src="${flowers[i][n].img}" alt="product img">
+                    <div class="desc">
+                        <span>¥${flowers[i][n].price}</span>
+                        <span>${flowers[i][n].name}</span>
+                        <span>${flowers[i][n].note}</span>
+
+                        <a href="" class="action"><span class="material-symbols-outlined">
+                                shopping_cart
+                            </span>　カートに入れる</a>
+                    </div>
+                </div>`
+            }
+        }
     </script>
 </body>
 

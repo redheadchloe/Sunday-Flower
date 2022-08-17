@@ -40,7 +40,6 @@
     padding: 0 10px;
     object-fit: cover;
     display: block;
-    cursor: pointer;
     animation: slideScroll 30s linear infinite;
 }
 
