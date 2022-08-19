@@ -78,8 +78,7 @@ window.addEventListener('scroll', function () {
         back.classList.remove('on');
     };
 });
-
-back.addEventListener('click', function () {
+back.addEventListener('click', () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 })

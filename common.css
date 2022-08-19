@@ -20,15 +20,44 @@
     height: 100vh;
     background: var(--clr-white);
     z-index: 999;
+} 
+svg{width: 10rem;
+    height: 10rem;}
+
+path {
+        stroke-dasharray: 100;
+        opacity: 10;
+        animation: animate 5s ease-in-out infinite;
+}
+@keyframes animate {
+        0% {
+            opacity: 10;
+            fill: none;
+            stroke-dashoffset: 100;
+        }
+
+        70% {
+            opacity: 10;
+            fill: rgba(51, 51, 51, 1);
+            stroke-dashoffset: 0;
+        }
+
+        90% {
+            opacity: 10;
+            fill: none;
+            stroke-dashoffset: 100;
+        }
+
+        100% {
+            opacity: 0;
+            fill: none;
+            stroke-dashoffset: 100;
+        }
 }
 
 .hide-preloader{
     z-index: -999;
     visibility: hidden;
-}
-
-.preloader img{
-    width: 50px;
 }
 
 html{
@@ -336,7 +365,7 @@ footer{
 
 
 /* back to top */
-span.to_top{
+a.to_top{
     position: fixed;
     right: 3%;
     bottom: -200%;
@@ -348,7 +377,7 @@ span.to_top{
     
 
 
-span.to_top.on {bottom: 3%;}
+a.to_top.on {bottom: 3%;}
     
 @keyframes bounce {
      0% {
