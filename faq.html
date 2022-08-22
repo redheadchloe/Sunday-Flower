@@ -605,7 +605,6 @@
         ]
         faqs = [flower, order, shipping, payment]
         const faqContainer = document.querySelectorAll('.questions');
-        console.log(faqContainer);
         for (let i = 0; i < faqs[i].length; i++) {
             for (let f = 0; f < faqContainer.length; f++) {
                 faqContainer[f].innerHTML += `
@@ -623,37 +622,37 @@
                             </div>
                         </article>`;
 
-
-
-                const questionItems = document.querySelectorAll('.qanda');
-                questionItems.forEach(function (questionItem) {
-                    questionItem.addEventListener('click', function (e) {
-
-
-                        const arrows = document.querySelectorAll('.btns');
-                        arrows.forEach(function (arrow) {
-                            if (arrow === e.currentTarget.firstElementChild.lastElementChild) {
-                                arrow.classList.toggle('active');
-                            }
-                            else {
-                                arrow.classList.remove('active');
-                            }
-                        });
-
-                        const answers = document.querySelectorAll('.answer');
-                        answers.forEach(function (answer) {
-                            if (answer === e.currentTarget.lastElementChild) {
-                                answer.classList.toggle('active');
-                            }
-                            else {
-                                answer.classList.remove('active');
-                            }
-                        });
-
-                    })
-                })
             }
+
+            const questionItems = document.querySelectorAll('.qanda');
+            questionItems.forEach(function (questionItem) {
+                questionItem.addEventListener('click', function (e) {
+
+
+                    const arrows = document.querySelectorAll('.btns');
+                    arrows.forEach(function (arrow) {
+                        if (arrow === e.currentTarget.firstElementChild.lastElementChild) {
+                            arrow.classList.toggle('active');
+                        }
+                        else {
+                            arrow.classList.remove('active');
+                        }
+                    });
+
+                    const answers = document.querySelectorAll('.answer');
+                    answers.forEach(function (answer) {
+                        if (answer === e.currentTarget.lastElementChild) {
+                            answer.classList.toggle('active');
+                        }
+                        else {
+                            answer.classList.remove('active');
+                        }
+                    });
+
+                })
+            })
         }
+
 
 
 
