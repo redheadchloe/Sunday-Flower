@@ -9,7 +9,7 @@
 
 .icon-item{
     border: 1px solid var(--anchor-text);
-    width: 200px;
+    max-width: 200px;
 }
 
 
