@@ -227,7 +227,7 @@ text-align: center;
 .review-container .wavy span{
     display: inline-block;
     animation: animate 2s ease-in-out infinite;
-    animation-delay: calc(0.2s * var(--i));
+    animation-delay: calc(.2s * var(--i));
     font-size: 1.2rem;
     color: var(--light-bg);
 }

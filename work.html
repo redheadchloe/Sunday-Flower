@@ -555,7 +555,7 @@
 
         let observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                entry.target.classList.toggle('slide-top', entry.isIntersecting);
+                entry.target.classList.add('slide-top', entry.isIntersecting);
                 if (entry.isIntersecting) observer.unobserve(entry.target)
             })
         }, {

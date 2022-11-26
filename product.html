@@ -543,24 +543,22 @@
         const contents = document.querySelectorAll('.content');
 
 
-        btns.forEach(function (btn) {
-            btn.addEventListener('click', function (e) {
+        btns.forEach((btn, i) => {
+            btn.addEventListener('click', (e) => {
                 const target = e.target.dataset.id;
-                contents.forEach(function (content) {
+                contents.forEach(content => {
                     if (target === 'all') {
                         content.classList.add('active');
                     }
                     else {
                         content.classList.remove('active');
-                        const show = document.getElementById(target);
-                        // console.log(show);
-                        show.classList.add('active');
+                        contents[i].classList.add('active');
                     }
-                });
-                btns.forEach(function (bye) {
-                    bye.classList.remove('active');
                 })
-                e.currentTarget.classList.add('active');
+                btns.forEach(btn => {
+                    btn.classList.remove('active');
+                })
+                btn.classList.add('active');
             });
         })
 

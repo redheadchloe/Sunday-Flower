@@ -843,6 +843,12 @@
                 }
             });
         });
+
+        window.addEventListener('click', (e) => {
+            if (!e.target.matches('.cross') && !e.target.matches('.pop') && popUp.classList.contains('on')) {
+                popUp.classList.remove('on');
+            }
+        })
     </script>
 </body>
 

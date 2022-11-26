@@ -569,13 +569,12 @@
         const btns = document.querySelectorAll('.links');
 
 
-        btns.forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                const target = document.querySelector(btn.dataset.id);
+        btns.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
                 intros.forEach(function (intro) {
                     intro.style.display = 'none';
                 })
-                target.style.display = 'flex';
+                intros[i].style.display = 'flex';
 
                 btns.forEach(function (bye) {
                     bye.classList.remove('active');
